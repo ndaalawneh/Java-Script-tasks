@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <select name="" id="font" onchange="fontchange()">
+            <option>Select</option>
+            <option value="Arial">Arial</option>
+            <option value="TimesNewRoman">Times new roman </option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">cursive</option>
+        </select>
+
+        <select id="size" onchange="fontSize()">
+            <option>size</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+            <option value="32">32</option>
+        </select>
+
+        <label for="1">Italic</label>
+        <input type="checkbox" id="a" onchange="fontItalic()" value="italic">
+        <label for="2">Bold</label>
+        <input type="checkbox" id="b" onchange="fontBold()" value="bold">
+        <label for="3">Underline</label>
+        <input type="checkbox" id="c" onchange="fontUderLine()" value="underline">
+        <br>
+        <br>
+
+        <textarea id="txt" rows="30" cols="30">
+
+        </textarea>
+    </form>
+    <script src="task4.js"></script>
+</body>
+
+</html>
+</body>
+</html>

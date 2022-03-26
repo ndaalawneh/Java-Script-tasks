@@ -115,17 +115,21 @@ Ex: middleOfArray([1,4,5]) => 4
 Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 */
 function middleOfArray(a){
-   
+   Y=parseInt(a.length/2);
 if(a.length%2==0){
-
+document.write(a[Y-1]);
 }
 else{
-
+    document.write(a[Y]);
 }
 }
 
 let myarr=[1,2,3,4,5,6,5];
+middleOfArray(myarr);
 
+
+
+ 
 
 
 
@@ -143,11 +147,11 @@ nums => [5,-22,3.5,44,98,44]
 */
 
  animals = ['cat', 'ele', 'bird' ,'zebra' ,'elephant'];
- animals[0]=cat;
- animals[1]=ele;
- animals[2]=bird;
- animals[3]=zebra;
- animals[4]=elephant;
+ animals[0]="cat";
+ animals[1]="ele";
+ animals[2]="bird";
+ animals[3]="zebra";
+ animals[4]="elephant";
 
 
 
@@ -165,8 +169,12 @@ Ex: indexOfArray(nums,4) => 9
 
 **try more cases by your self
 */
-
-
+var nums= [1,2,3,8,9];
+function indexOfArray(nums,X){
+let Y=nums[X];
+document.write('<br>' + Y +'<br>');
+}
+indexOfArray(nums,2);
 /*
 11
 Create a function called arrayExceptLast
@@ -179,7 +187,14 @@ Ex: arrayExceptLast(nums) =>  [1,2,3,8]
 **try more cases by your self
 */
 
+function arrayExceptLast(a){
 
+nums.pop();
+return a;
+
+}
+var nums= [1,2,3,8,9]
+document.write(arrayExceptLast(nums));
 /*
 12
 Create a function called addToEnd
@@ -191,6 +206,18 @@ Ex: addToEnd(nums,55) =>  [1,2,3,8,55]
 
 **try more cases by your self
 */
+var nums= [1,2,3,8,9];
+function addToEnd(nums ,p2){
+nums.push(p2); 
+return nums
+}
+
+addToEnd(nums,55);
+document.write('<br>'+ nums );
+
+
+
+
 
 
 // all the exercises below should solved 2 times: 1- for loop 2- while lopp
@@ -207,6 +234,21 @@ Ex: sumArray(nums) => 23
 **try more cases by your self
 */
 
+var nums= [1,2,3,8,9];
+function sumArray(nums){
+   let sum = 0;
+   for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+   }
+   document.write('<br>' + sum);
+}
+sumArray(nums);
+
+
+
+
+
+
 
 /*
 14
@@ -220,6 +262,19 @@ Ex: minInArray(nums) => 1
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var nums= [1,2,3,8,9];
+function minInArray(nums){
+let min=nums[0];
+for (i=0 ; i<nums.length ; i++){
+    if(min>nums[i]){
+        min=nums[i];
+    }
+    
+    
+}
+document.write('<br>'+ min);
+}
+minInArray(nums);
 
 
 /*
@@ -234,7 +289,16 @@ Ex: minInArray(nums,8) => [1,2,3,9]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+var nums= [1,2,3,8,9];
+function removeFromArray(n,v){
+for(i=0 ; i<n.length;i++){
+    if(v==n[i]){
+    delete n[i];
+    }
+}
+document.write('<br>' + n);
+}
+removeFromArray(nums,8);
 
 /*
 16
@@ -248,7 +312,22 @@ Ex: oddArray(nums) => [1,3,9]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var nums= [1,2,3,8,9];
+let odd=[];
+let even=[];
+function oddArray(a){
+    for(i=0 ; i<a.length ; i++){
+        if(a[i]%2 !==0){
+            odd.push(a[i]);
+        }
+        else{
+        even.push(a[i]);
+        }
+    }
+    document.write( '<br>' + odd);
 
+}
+oddArray(nums);
 
 /*
 17
@@ -265,8 +344,20 @@ Ex: aveArray(nums) => 16.6
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var nums= [1,2,3,8,9];
+var nums2= [1,2,3,8,9,77];
 
+function aveArray(a){
+let sum=0;
+for(i=0 ; i<a.length ; i++){
+    sum=sum+a[i];
+}
+let avg=sum/a.length;
+return avg ;
+}
 
+ document.write( '<br>' + aveArray(nums)); 
+document.write( '<br>' + aveArray(nums2));
 /*
 18
 Create a function called shorterInArray
@@ -279,7 +370,17 @@ Ex: shorterInArray(strings) => "alex"
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+var strings= ["alex","mercer","madrasa","rashed2","emad","hala"];
+function shorterInArray(a){
+var X=a[0];
+for(i=0 ; i<a.length ; i++){
+    if(X.length>a[i].length){
+     X=a[i];
+    }
+}
+return X;
+}
+document.write('<br>' + shorterInArray(strings));
 
 /*
 19
@@ -294,7 +395,18 @@ Ex: repeatChar(string,"z") => 0
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var string= "alex mercer madrasa rashed2 emad hala" ;
 
+function  repeatChar(s , ch){
+    let B=0;
+for(i=0 ; i<s.length ; i++){
+    if( s[i]==ch){
+    B++;
+    }
+}
+return B;
+}
+document.write('<br>' + repeatChar(string , "a"));
 
 /*
 20
@@ -308,6 +420,20 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var strings= ["alex","mercer","madrasa","rashed2","emad","hala"];
+function evenIndexOddLength(a){
+    for (i=0 ; i<a.length ; i++){
+        if(i%2==0){
+            if(a[i].length%2!=0){
+                return a[i];
+            }
+        }
+
+        
+    }
+
+}
+document.write('<br>' + evenIndexOddLength(strings));
 
 
 /*
@@ -322,7 +448,16 @@ Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var nums= [44, 5, 4, 3, 2, 10];
 
+function powerElementIndex(a){
+for(i=0 ; i<a.length ; i++){
+    a[i] = Math.pow(a[i] , i);
+    
+}
+return a;
+}
+document.write('<br>' + powerElementIndex(nums));
 
 /*
 22
@@ -336,3 +471,17 @@ Ex: evenNumberEvenIndex(nums) => [2,8,34]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+var nums= [5,2,2,1,8,66,55,77,34,9,55,1];
+function evenNumberEvenIndex(a){
+    
+    for(i=0 ; i<a.length ; i++){
+       if(i%2==0){
+        if(a[i]%2==0){
+            document.write('<br>' + a[i]);
+              }
+       }
+    }
+   
+    }
+    evenNumberEvenIndex(nums);
+    
